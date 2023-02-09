@@ -12,15 +12,9 @@ namespace task1
         public int Scale { get; set; }
 
         string[,] place = new string[scale, scale];
-        public void ChangePlace(int i, int j, string place)
-        {
-            this.place[i, j] = place;
-        }
+        public void ChangePlace(int i, int j, string place) => this.place[i, j] = place;
 
-        public string GetPlace(int i, int j)
-        {
-            return this.place[i, j];
-        }
+        public string GetPlace(int i, int j) => place[i, j];
 
         public Garden()
         {
@@ -108,18 +102,12 @@ namespace task1
                 this.symbol = 'X';
             }
             else this.symbol = symbol;
-
             this.directionType = directionType;
             scale = garden.Scale - 1;
-
             position[0] = directionType ? scale : 0;
             position[1] = directionType ? scale : 0;
-            
-
         }
-
         public string Perform() => Convert.ToString(symbol);
-
     }
 
 }

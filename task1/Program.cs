@@ -45,14 +45,9 @@ namespace task1
                 }
             }
 
-            void Plant1()
-            {
-                Plant(garden, gardener1);
-            }
-            void Plant2()
-            {
-                Plant(garden, gardener2);
-            }
+            void Plant1() => Plant(garden, gardener1);
+            void Plant2() => Plant(garden, gardener2);
+
             ThreadStart threadStart1 = new ThreadStart(Plant1);
             ThreadStart threadStart2 = new ThreadStart(Plant2);
             Thread thread1 = new Thread(threadStart1);
@@ -69,16 +64,8 @@ namespace task1
 
             Console.WriteLine("Работа над садом закончена!");
             Console.ReadKey();
-
         }
-
-
-
     }
-
-   
-
-
-    }
+}
 
 
